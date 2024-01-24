@@ -1,0 +1,28 @@
+.mainCon {
+    background-color: white;
+    height: 650px;
+    width: 900px;
+    border-radius: 10px;
+}
+.dropzone{
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form{
+    margin: 3px 0px;
+}
+.content > button{
+    margin-top: 10px;
+}
+.files{
+    max-height: 70px;
+    overflow: scroll;
+}
