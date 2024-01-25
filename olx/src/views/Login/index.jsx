@@ -29,7 +29,7 @@ function LogIn() {
                 <div onClick={() => { navigate("/") }} className="deleteIcon"><i className="fa-solid fa-xmark"></i></div>
                 <div className="content">
                     <div className="logo">
-                        <img className="LoginImg" src="src/views/NavBar/brandIconLogin_noinline.93e8a1a9cf50902ba5250814f57810ff.svg" />
+                        <img className="LoginImg" src="/olx logo big.svg" />
                         <br />
                         <h4>Welcome to OLX</h4>
                         <span>The trusted community of buyers and sellers.</span>

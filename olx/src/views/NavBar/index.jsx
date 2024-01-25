@@ -32,21 +32,21 @@ console.log(UserDetail);
   return (
     <div className='header'>
       <div className='upperbody'>
-        <img className='fisrtLogo' width={32} src='src/views/navBar/olx_logo_small-removebg-preview.png' />
+        <img className='fisrtLogo' width={32} src='/olx_logo_small.png' />
 
         <div className='CarsOpt'>
-          <img width={25} src="src/views/navBar/car-removebg-preview.png" />
+          <img width={25} src="/car-removebg-preview.png" />
           <span>MOTORS</span>
         </div>
 
         <div className='propOpt'>
-          <img width={23} src="src/views/navBar/property-removebg-preview.png" />
+          <img width={23} src="/property-removebg-preview.png" />
           <span>PROPERTY</span>
         </div>
 
       </div>
       <div className='lowerBody'>
-        <img src="src/views/navBar/olx_logo_Big-removebg-preview.png" />
+        <img src="/olx logo big.svg" />
 
         <div className='searchContainer'>
 
@@ -59,7 +59,7 @@ console.log(UserDetail);
           </div>
 
           <div className='dropDown'>
-            <img src="src/views/navBar/dropdown.png" />
+            <img src="/dropdown.png" />
           </div>
 
         </div>
@@ -74,10 +74,10 @@ console.log(UserDetail);
             user
               ?
               <div className="profile">
-                <img width={'15%'} src="src/views/NavBar/chat Icon.svg" alt="" />
-                <img width={'15%'} src="src/views/NavBar/notification.svg" alt="" />
+                <img width={'15%'} src="/chat Icon.svg" alt="" />
+                <img width={'15%'} src="/notification.svg" alt="" />
                 <div className="Dp" onClick={() => { setDropper(!dropper) }}>
-                  <img width={40} src="src/views/NavBar/iconProfile.png" alt="" />
+                  <img width={40} src="/iconProfile.png" alt="" />
                   <i style={{ rotate: rotation }} className="fa-solid fa-chevron-down"></i>
                 </div>
               </div>
@@ -96,9 +96,9 @@ console.log(UserDetail);
                 }
               }} className="_6bd5cb3c">
           <div className="button-content">
-            <img src="src/views/navBar/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg" alt="Border Image" />
+            <img src="/sell border.svg" alt="Border Image" />
             <div className="_1075545d a662c662 _42f36e3b _96d4439a">
-              <img src="src/views/navBar/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg" alt="Plus Icon" />
+              <img src="/sell plus.svg" alt="Plus Icon" />
               <span><b>SELL</b></span>
             </div>
           </div>
@@ -112,7 +112,7 @@ console.log(UserDetail);
         <div className="lastPart">
           <div className="dropdownDiv">
             <div className="Name">
-              <img src="src/views/NavBar/iconProfile.png" width={56} alt="" />
+              <img src="/iconProfile.png" width={56} alt="" />
               <div>
                 <span style={{fontSize:'12px'}}>Hello,</span>
                 <br />

@@ -28,7 +28,7 @@ function Dashboard(){
     // }
     return <div>
 <div style={{minHeight:1000}}>
-   <img width={"100%"} src="src/views/Dashboard/bandicam 2024-01-14 22-44-23-677.jpg" />
+   <img width={"100%"} src="/slider.jpg" />
 <div className="container-fluid mt-2 mb-6">
   <div className="row row-cols-1 row-cols-md-4 g-4 container-fluid">
     {products.map(item => {
