@@ -1,23 +1,32 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { getAllProducts, getSingleAd } from "../../config/firebase"
-import Footer from '../NavBar/footer';
-import './index.css'
-import Card from 'react-bootstrap/Card';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import Card from 'react-bootstrap/Card';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { getSingleAd } from "../../config/firebase"
+import { removeLiked, updateLiked } from '../../store/likeSlice'
+import Footer from '../NavBar/footer';
+import './index.css'
 
 
 function Detail() {
   const { id } = useParams();
   const [detailItem, setdetailItem] = useState([])
+  const [postLiked, setPostLiked] = useState(false)
+  const favourites = useSelector(state => state.likeSlice.liked)
+
   useEffect(() => {
     getDetail()
   }, [])
+
+  useEffect(() => {
+    const isLiked = favourites.some(item => item.id === id);
+    setPostLiked(isLiked);
+  }, [favourites, id]);
+
 
   async function getDetail() {
     const res = await getSingleAd(id)
@@ -25,10 +34,25 @@ function Detail() {
   }
   const { title, description, brand, price, imageURL } = detailItem || {};
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+
+  console.log(detailItem);
+  console.log('favourites', favourites);
+
+  const likeIt = () => {
+    console.log(detailItem);
+    dispatch(updateLiked(detailItem))
+  }
+
+  const RemoveLike = () => {
+    console.log(detailItem);
+    dispatch(removeLiked(detailItem.id))
+  }
 
 
   return <div style={{ zIndex: -1 }}>
-    <button onClick={() => navigate(-1)}><i class="fa-solid fa-arrow-left" style={{ color: '#ffffff;' }} /></button>
+    <button onClick={() => navigate(-1)}><i class="fa-solid fa-arrow-left" /></button>
     <div id="container" className="container-fluid">
       <Row>
         <Col sm={8}>
@@ -38,8 +62,8 @@ function Detail() {
                 imageURL.map((image, index) => (
                   <Carousel.Item key={index}>
                     <img
-                    height={600}
-                    style={{width:700 }}
+                      height={600}
+                      style={{ width: 700 }}
                       className="d-block w-100"
                       src={image}
                       alt={`Slide ${index + 1}`}
@@ -73,7 +97,13 @@ function Detail() {
                 </h4>
               </Card.Text>
 
-              <div onClick={(e) => { like(e.target) }} style={{}}><img style={{ float: 'right', marginRight: '0px' }} width={30} src="https://static-00.iconduck.com/assets.00/heart-icon-512x461-rdoishra.png" alt="" /></div>
+              <div style={{ fontSize: '30px', cursor:'pointer' }}>
+                {postLiked ? (
+                  <i onClick={RemoveLike} className="fa-solid fa-heart" style={{ float: 'right', marginRight: '0px', width: '30px' }}></i>
+                ) : (
+                  <i onClick={likeIt} className="fa-regular fa-heart" style={{ float: 'right', marginRight: '0px', width: '30px' }}></i>
+                )}
+              </div>
               <img style={{ float: 'right', marginRight: '20px' }} width={30} src="https://cdn-icons-png.flaticon.com/512/1358/1358023.png" alt="" />
             </Card.Body>
           </Card>

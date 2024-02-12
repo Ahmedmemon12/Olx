@@ -1,4 +1,63 @@
 .container {
     width: 100vw;
-    background: gray;
+}
+
+.slide {
+    width: 80vw;
+}
+
+.slider {
+    width: 100%;
+    height: 27vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.catogery {
+    width: 80vw;
+}
+
+.catogery>h4 {
+    font-weight: 700;
+    font-size: 24px;
+    text-overflow: ellipsis;
+}
+
+.UpperBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.cards {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.card {
+    width: 18rem;
+    margin: 0px 10px;
+}
+
+.DlowerBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mobile > span{
+    font-size: 24px;
+    font-weight: 700;
 }

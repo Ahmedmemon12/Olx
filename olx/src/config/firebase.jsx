@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import Swal from 'sweetalert2'
 import { getFirestore, collection, getDocs, doc, getDoc, setDoc } from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { useState } from "react";
 
 const firebaseConfig = {
@@ -16,19 +16,19 @@ const firebaseConfig = {
 };
 
 export let userInfo = []
-export let UID = '' 
+export let UID = ''
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 export const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
 export async function getAllProducts() {
   const querySnapshot = await getDocs(collection(db, "Products"));
   const products = []
   querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
     products.push({ id: doc.id, ...doc.data() })
   });
   return products
@@ -39,12 +39,11 @@ export async function getSingleAd(id) {
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
+    const adData = { id: docSnap.id, ...docSnap.data() };
+    return adData;
   } else {
-    // docSnap.data() will be undefined in this case
+    return null;
   }
-
-  return docSnap.data()
-
 }
 export async function getUserInfo(uid) {
   const docRef = doc(db, "users", uid);
@@ -70,6 +69,9 @@ export async function signUp(userInfo) {
     text: "Registered",
   });
 }
+export async function SignInWithGoogle() {
+  await signInWithPopup(auth, provider)
+}
 
 
 export async function login(userInfo) {
@@ -89,7 +91,7 @@ export async function logout() {
     icon: "warning",
     confirmButtonColor: "#3085d6",
   }).then(
-   await signOut(auth)
+    await signOut(auth)
   )
 }
 
