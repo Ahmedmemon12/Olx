@@ -10,7 +10,7 @@ import { getSingleAd } from "../../config/firebase"
 import { removeLiked, updateLiked } from '../../store/likeSlice'
 import Footer from '../NavBar/footer';
 import './index.css'
-
+import MapWithFixedCenter from './fixMap';
 
 function Detail() {
   const { id } = useParams();
@@ -32,7 +32,7 @@ function Detail() {
     const res = await getSingleAd(id)
     setdetailItem(res)
   }
-  const { title, description, brand, price, imageURL } = detailItem || {};
+  const { title, description, brand, price, imageURL, location } = detailItem || {};
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -97,7 +97,7 @@ function Detail() {
                 </h4>
               </Card.Text>
 
-              <div style={{ fontSize: '30px', cursor:'pointer' }}>
+              <div style={{ fontSize: '30px', cursor: 'pointer' }}>
                 {postLiked ? (
                   <i onClick={RemoveLike} className="fa-solid fa-heart" style={{ float: 'right', marginRight: '0px', width: '30px' }}></i>
                 ) : (
@@ -147,6 +147,9 @@ function Detail() {
             </Card.Body>
           </Card>
         </Col>
+        <div style={{ width: '1580px', height: '400px', overflow: 'hidden' }}>
+          <MapWithFixedCenter coords={detailItem.location} />
+        </div>
 
       </Row>
     </div>
