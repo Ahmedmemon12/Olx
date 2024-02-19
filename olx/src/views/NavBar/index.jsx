@@ -48,7 +48,7 @@ export default function Navbar({ user }) {
       <div className='lowerBody'>
         <img src="/olx logo big.svg" />
 
-        <div className='searchContainer'>
+        <div className='searchContainer SearchContainer'>
 
           <div className='searchIcon'>
             <i className="fa-solid fa-magnifying-glass" style={{ color: '#000000' }} />

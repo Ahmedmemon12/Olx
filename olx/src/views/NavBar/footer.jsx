@@ -4,21 +4,16 @@ import "./index.css";
 export default function footer() {
   return (
     <div className='footer'>
-      <div className="row container-fluid mt-4" style={{ backgroundColor: 'black', color: " white" }}>
+      <div className="row container-fluid mt-4" style={{ backgroundColor: 'black', color: " white", display:'flex', justifyContent:'center' }}>
         <div className="col-6 col-md-4 col-lg-2 mb-2 ">
 
 
-          <b>TRENDING SEARCHES<br /></b>
+          <b>TRENDING SEARCH</b><br />
           Bikes<br />
           Watches<br />
           Books<br />
           Dogs<br />
         </div>
-        <div className="col-6 col-md-4 col-lg-2 mb-2 mt-2" >
-          <b>ABOUT US</b><br />
-          About Dubizzle Group<br />
-          OLX Blog<br />
-        </div>
         <div className="col-6 col-md-4 col-lg-2 mb-2 mt-2">
           <b>Contact Us</b><br />
           OLX for Businesses<br />
@@ -28,16 +23,7 @@ export default function footer() {
           Terms of use<br />
           Privacy Policy<br />
         </div>
-        <div className="col-6 col-md-4 col-lg-2 mb-2 mt-2">
-          <b>Contact Us</b><br />
-          OLX for Businesses<br />
-          OLX<br />
-          Help<br />
-          Sitemap<br />
-          Terms of use<br />
-          Privacy Policy<br />
-        </div>
-        <div className="col-6 col-md-4 col-lg-2 mb-2 mt-2">
+        <div className="col-7 col-md-4 col-lg-2 mb-2 mt-2">
           <b>FOLLOW US</b>
           <img src="https://www.olx.com.pk/assets/iconFacebook_noinline.773db88c5b9ee5aaab365e61cdb750da.svg" alt="" height="20px" />
           <img src="https://www.olx.com.pk/assets/iconTwitter_noinline.6037fa7d9a7b9d6408fb1b3d70524b97.svg" alt="" height="20px" />
