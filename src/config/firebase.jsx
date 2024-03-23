@@ -3,7 +3,6 @@ import { getAnalytics } from "firebase/analytics";
 import Swal from 'sweetalert2'
 import { getFirestore, collection, getDocs, doc, getDoc, setDoc } from "firebase/firestore";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-import { useState } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC3RUHEqKQHk5bdsMt9tMJ-Z2kR8pS8SVk",

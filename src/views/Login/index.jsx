@@ -30,7 +30,7 @@ function LogIn() {
                 <div onClick={() => { navigate("/") }} className="deleteIcon"><i className="fa-solid fa-xmark"></i></div>
                 <div className="content">
                     <div className="logo">
-                        <img className="LoginImg" src="/olx logo big.svg" />
+                        <img className="LoginImg" src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Folx_logo_Big-removebg-preview.png?alt=media&token=304faf7a-b97d-42e9-bd74-fc0950c5ad99" />
                         <br />
                         <h4>Welcome to OLX</h4>
                         <span>The trusted community of buyers and sellers.</span>

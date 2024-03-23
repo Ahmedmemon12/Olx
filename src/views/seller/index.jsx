@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import './index.css'
 import Swal from 'sweetalert2';
 import Map from './map';
-import { display } from '@mui/system';
 
 function SellProduct() {
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
@@ -100,7 +99,7 @@ function SellProduct() {
                         <div onClick={() => { navigate("/") }} className="deleteIcon"><i className="fa-solid fa-xmark"></i></div>
                         <div className="content">
                             <div className="logo">
-                                <img className="LoginImg" src="/olx_logo_Big-removebg-preview.png" />
+                                <img className="LoginImg" src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Folx_logo_Big-removebg-preview.png?alt=media&token=304faf7a-b97d-42e9-bd74-fc0950c5ad99" />
                                 <h4>Post Your AD <i>NOW!</i></h4>
                             </div>
                             <div className="form">

@@ -32,21 +32,21 @@ export default function Navbar({ user }) {
   return (
     <div className='header'>
       <div className='upperbody'>
-        <img className='fisrtLogo' width={32} src='/olx_logo_small.png' />
+        <img className='fisrtLogo' width={32} src='https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Folx_logo_small.png?alt=media&token=fbc4e826-dfcf-4f47-b5d5-bd3017d77d3e' />
 
         <div className='CarsOpt'>
-          <img width={25} src="/car-removebg-preview.png" />
+          <img width={25} src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Fproperty-removebg-preview.png?alt=media&token=cef4be1d-5aac-4b67-a81f-cb9ad992292d" />
           <span>MOTORS</span>
         </div>
 
         <div className='propOpt'>
-          <img width={23} src="/property-removebg-preview.png" />
+          <img width={26} src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Fcar-removebg-preview.png?alt=media&token=9fa9b7eb-a4f9-415d-9c41-22a4ea7a3086" />
           <span>PROPERTY</span>
         </div>
 
       </div>
       <div className='lowerBody'>
-        <img src="/olx logo big.svg" />
+        <img src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Folx_logo_Big-removebg-preview.png?alt=media&token=304faf7a-b97d-42e9-bd74-fc0950c5ad99" />
 
         <div className='searchContainer SearchContainer'>
 
@@ -59,7 +59,7 @@ export default function Navbar({ user }) {
           </div>
 
           <div className='dropDown'>
-            <img src="/dropdown.png" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Fdropdown.png?alt=media&token=4fc6b959-b2fc-490d-bd9e-b4dbe622d58d" />
           </div>
 
         </div>
@@ -96,9 +96,9 @@ export default function Navbar({ user }) {
           }
         }} className="_6bd5cb3c">
           <div className="button-content">
-            <img src="/sell border.svg" alt="Border Image" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Fsell%20border.svg?alt=media&token=9cc24f4a-5a47-4fb0-bd1c-55fb963bd8ad"/>
             <div className="_1075545d a662c662 _42f36e3b _96d4439a">
-              <img src="/sell plus.svg" alt="Plus Icon" />
+              <img src="https://firebasestorage.googleapis.com/v0/b/olx-app-976a5.appspot.com/o/OLX%20UI%2Fsell%20plus.svg?alt=media&token=790395b8-7ec7-45ef-9df1-4a6450d51ab1"/>
               <span><b>SELL</b></span>
             </div>
           </div>
