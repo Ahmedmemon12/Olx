@@ -1,6 +1,5 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import Card from 'react-bootstrap/Card';

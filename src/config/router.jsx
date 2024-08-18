@@ -73,7 +73,7 @@ function Layout() {
     }
   }, [location.pathname, user]);
 
-  if (loader) return <div style={{ height: 700, width: 1500, display: "flex", flexDirection: 'column', alignItems: "center", justifyContent: "center" }}>
+  if (loader) return <div style={{ height: "100vh", width: "100%", display: "flex", flexDirection: 'column', alignItems: "center", justifyContent: "center" }}>
     <Loader />
   </div>;
 
